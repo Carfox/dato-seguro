@@ -1,0 +1,84 @@
+# Git Ignore para el proyecto de Hyperledger Fabric
+
+# Archivos binarios de Hyperledger Fabric
+fabric-samples/bin/
+fabric-samples/config/
+
+# Archivos temporales y logs
+*.log
+*.tmp
+
+# Archivos de Docker
+*.docker*
+docker-compose.override.yaml
+
+# Credenciales y archivos sensibles
+.env
+*.key
+*.cert
+*.pem
+
+# Archivos de instalación y dependencias
+install-fabric.sh
+
+# Archivos generados
+node_modules/
+vendor/
+
+# Archivos específicos de editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias de Go
+/go/
+/bin/
+/pkg/
+*.test
+coverage.out
+
+# Módulos y caché de Go
+go.sum
+go.mod
+tmp/
+
+
+# Emacs backup files
+*~
+*#
+.#*
+# Vim file artifacts
+.*.sw*
+.DS_Store
+.project
+# omit Go vendor directories
+vendor/
+.vscode
+.gradle
+.idea
+# Dependency directories
+node_modules/
+package-lock.json
+# Ignore Gradle build output directory
+build
+# Ignore Maven build output directory
+target
+
+# Eclipse
+.classpath
+.settings
+
+# installed Fabric binaries etc.
+/bin/
+builders/
+config/
+external-chaincode/
+install-fabric.sh
+
+# override the ignore of all config/ folders
+!full-stack-asset-transfer-guide/infrastructure/sample-network/config
+
+
+#otros proyectos
+curso-hyperledger-fabric/
+fabric-samples/
