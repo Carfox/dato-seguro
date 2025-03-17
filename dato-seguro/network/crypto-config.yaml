@@ -1,0 +1,50 @@
+# Autor: Carlos Lopez
+# Date: 16/03/2025
+# SPDX-License-Identifier: Apache-2.0
+#
+OrdererOrgs:
+    - Name: Gobierno del Ecuador
+      Domain: gob.ec
+      EnableNodeOUs: true
+      Specs:
+        - Hostname: orderer
+          SANS:
+            - localhost
+PeerOrgs:
+    - Name: Registro Civil
+      Domain: registrocivil.gob.ec
+      EnableNodeOUs: true
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Registro Electoral
+      Domain: cne.gob.ec
+      EnableNodeOUs: true
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Registro Migratorio 
+      Domain: migracion.gob.ec
+      EnableNodeOUs: true    
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+    - Name: Dirección Nacional de Registros Públicos
+      Domain: dinardarp.gob.ec
+      EnableNodeOUs: true    
+      Template:
+        Count: 1
+        SANS:
+          - localhost
+      Users:
+        Count: 1
+  
