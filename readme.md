@@ -41,7 +41,7 @@ sudo ./install-env.sh
 Una vez finalizada la instalación, verifica que los componentes de Hyperledger Fabric están instalados correctamente:
 
 ```bash
-fabric-samples/bin/configtxgen --version
+configtxgen --version
 ```
 
 Si el comando devuelve una versión válida, la instalación se ha realizado con éxito.
@@ -57,5 +57,5 @@ Si el comando devuelve una versión válida, la instalación se ha realizado con
   ```
 
 ## Contacto
-Si encuentras problemas durante la instalación, revisa la documentación oficial de Hyperledger Fabric o consulta con la comunidad.
+Si encuentra problemas durante la instalación, revisa la documentación oficial de Hyperledger Fabric o a mi contacto carlotreball@gmail.com.
 
