@@ -1,9 +1,8 @@
 # Autor: Carlos Lopez
 # Date: 16/03/2025
-# SPDX-License-Identifier: Apache-2.0
-#
+
 OrdererOrgs:
-    - Name: Gobierno del Ecuador
+    - Name: GobiernoDelEcuador
       Domain: gob.ec
       EnableNodeOUs: true
       Specs:
@@ -11,7 +10,7 @@ OrdererOrgs:
           SANS:
             - localhost
 PeerOrgs:
-    - Name: Registro Civil
+    - Name: RegistroCivil
       Domain: registrocivil.gob.ec
       EnableNodeOUs: true
       Template:
@@ -20,7 +19,7 @@ PeerOrgs:
           - localhost
       Users:
         Count: 1
-    - Name: Registro Electoral
+    - Name: Cne
       Domain: cne.gob.ec
       EnableNodeOUs: true
       Template:
@@ -29,8 +28,8 @@ PeerOrgs:
           - localhost
       Users:
         Count: 1
-    - Name: Registro Migratorio 
-      Domain: migracion.gob.ec
+    - Name: Ant
+      Domain: ant.gob.ec
       EnableNodeOUs: true    
       Template:
         Count: 1
