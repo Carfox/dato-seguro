@@ -138,7 +138,7 @@ Organizations:
   #Org 4 
   - &Org4
     Name: DinardarpMSP
-    ID: AntMDinardarpMSPSP
+    ID: DinardarpMSP
     MSPDir: crypto-config/peerOrganizations/dinardarp.gob.ec/msp
     Policies:
         Readers:
