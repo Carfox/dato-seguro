@@ -1,8 +1,63 @@
+## ⚠️ Nota importante: Preparación del entorno antes de ejecutar comandos
+
+Si estás en una nueva terminal, o si los comandos como `cryptogen`, `configtxgen` o `peer` no funcionan correctamente, asegúrate de configurar el entorno adecuadamente antes de continuar.
+
+### 🔧 Paso 1: Agregar binarios de Fabric al PATH
+
+Desde la raíz donde se encuentra la carpeta `fabric-samples`, ejecuta:
+
+```
+~/blockchain/
+├── fabric-samples/       # Contiene los binarios, ejemplos oficiales y scripts de Hyperledger Fabric
+│   └── bin/              # Contiene herramientas como peer, cryptogen, configtxgen
+│
+└── dato-seguro/          # Proyecto personalizado con configuración y red de Dato Seguro
+    ├── network/          # Carpeta donde vive la red (docker-compose, crypto, scripts)
+    └── README.md         # Documentación del proyecto
+```
+
+```bash
+cd ~/blockchain/
+echo 'export PATH=$PATH:$PWD/fabric-samples/bin' >> ~/.profile
+source ~/.profile
+```
+
+Esto asegura que los binarios (`cryptogen`, `configtxgen`, `peer`, etc.) estén disponibles en la terminal.
+
+---
+
+### 📂 Paso 2: Ejecutar comandos dentro de la red correcta
+
+Si ves un error como:
+
+```bash
+cryptogen: error: open ./crypto-config.yaml: no such file or directory
+```
+
+Significa que no estás en el directorio donde se encuentra el archivo de configuración. En el caso del proyecto `dato-seguro`, navega a la carpeta `network`:
+
+```bash
+cd ~/blockchain/dato-seguro/network
+cryptogen generate --config=./crypto-config.yaml
+```
+
+✅ Este comando debería ejecutarse correctamente y generar los certificados para las siguientes organizaciones:
+
+- registrocivil.gob.ec
+- cne.gob.ec
+- ant.gob.ec
+- dinardarp.gob.ec
+
+---
+
+### 💡 Recomendación
+
+Incluye estos pasos al iniciar cualquier sesión de desarrollo o pruebas para evitar errores relacionados con rutas o configuraciones no cargad
+
 
 # Pasos para levantar la red de Dato Seguro
 
 Este documento detalla los pasos necesarios para iniciar la red de Hyperledger Fabric correspondiente al sistema **Dato Seguro**.
-
 
 
 ---
