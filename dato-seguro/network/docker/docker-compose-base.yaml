@@ -126,14 +126,14 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.dinardarp.gob.ec:7051
       # ---CHANGED--- changed to reflect peer name, org name and our company's domain
       - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.dinardarp.gob.ec:7051
-      # ---CHANGED--- ensure that the MSP ID is correctly set of ant
+      # ---CHANGED--- ensure that the MSP ID is correctly set of dinardarp
       - CORE_PEER_LOCALMSPID=DinardarpMSP
     volumes:
         - /var/run/:/host/var/run/
         # ---CHANGED--- changed to reflect peer name, org name and our company's domain
-        - ../crypto-config/peerOrganizations/ant.gob.ec/peers/peer0.dinardarp.gob.ec/msp:/etc/hyperledger/fabric/msp
+        - ../crypto-config/peerOrganizations/dinardarp.gob.ec/peers/peer0.dinardarp.gob.ec/msp:/etc/hyperledger/fabric/msp
         # ---CHANGED--- changed to reflect peer name, org name and our company's domain
-        - ../crypto-config/peerOrganizations/ant.gob.ec/peers/peer0.dinardarp.gob.ec/tls:/etc/hyperledger/fabric/tls
+        - ../crypto-config/peerOrganizations/dinardarp.gob.ec/peers/peer0.dinardarp.gob.ec/tls:/etc/hyperledger/fabric/tls
     ports:
       - 9951:7051
       - 9953:7053
